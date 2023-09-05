@@ -38,5 +38,10 @@ def encrypt_letter(letter, shift):
 
 # TEST CASES 
 
-#a is shifted over by 5, results to f
-write_file('enChar', encrypt_letter('a', 5))
+# a is shifted over by 5, results to f
+print(encrypt_letter('a', 5))
+#write_file('enChar', encrypt_letter('a', 5))
+
+
+
+
