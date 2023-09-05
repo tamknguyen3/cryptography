@@ -10,12 +10,14 @@ Note: shift of 0 or 26 is the same as no encryption
 
 # function that writes files 
 def write_file(filename, data):
-    new_file = open(filename, "w")
-    for sentence in data:
-        for word in sentence:
-            new_file.write(word + " ")
-        new_file.write("\n")
-    new_file.close()
+  new_file = open(filename, "w")
+  for sentence in data:
+    for word in sentence:
+        new_file.write(word + " ")
+    new_file.write("\n")
+  new_file.close()
+
+
 
 
 # function to add a shift to a letter (forwards)
