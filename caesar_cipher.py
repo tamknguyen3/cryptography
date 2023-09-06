@@ -17,9 +17,6 @@ def write_file(filename, data):
     new_file.write("\n")
   new_file.close()
 
-
-
-
 # function to add a shift to a letter (forwards)
 # -- ord() returns the unicode from a given char
 # -- chr() returns the character that respresents the specified code
@@ -33,17 +30,27 @@ def decrypt_letter(letter, shift):
   return chr(cipher)
 
 # function to encrypt words using a shift
+def encrypt_word(word, shift):
+  en_letters = []
+  
+  for letter in word:
+    cipher = encrypt_letter(letter)
+    en_letters.append(cipher)
+    
+  return en_letters
+  
+  
 # function to decrypt words using a shift 
 
 # function to encrypt messages using a shift
 # function to decrypt messages using a shift 
 
 
-# TEST CASES 
+# --- TEST CASES ---
 
-# a is shifted over by 5, results to f
-# print(encrypt_letter('a', 5))
-write_file('enChar', encrypt_letter('a', 5))
+# shift by 0 or 26 --> yields the same letter result 
+print(encrypt_letter('a', 0))
+write_file('enChar', encrypt_letter('a', 0))
 
 
 
