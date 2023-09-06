@@ -50,7 +50,9 @@ def encrypt_word(word):
 
 # shift by 0 or 26 --> yields the same letter result 
 print(encrypt_letter('a', 0))
-write_file('enChar', encrypt_letter('a', 0))
+print(encrypt_letter('a', 26))
+
+write_file('enChar', encrypt_letter('a', 5)) # yields f in a write called enChar
 
 
 
