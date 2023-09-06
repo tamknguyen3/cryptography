@@ -30,7 +30,7 @@ def decrypt_letter(letter, shift):
   return chr(cipher)
 
 # function to encrypt words using a shift
-def encrypt_word(word, shift):
+def encrypt_word(word):
   en_letters = []
   
   for letter in word:
@@ -51,6 +51,11 @@ def encrypt_word(word, shift):
 # shift by 0 or 26 --> yields the same letter result 
 print(encrypt_letter('a', 0))
 write_file('enChar', encrypt_letter('a', 0))
+
+print(encrypt_letter('a', 26))
+write_file('enChar', encrypt_letter('a', 26))
+
+
 
 
 
