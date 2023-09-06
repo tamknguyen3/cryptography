@@ -24,10 +24,13 @@ def write_file(filename, data):
 # -- ord() returns the unicode from a given char
 # -- chr() returns the character that respresents the specified code
 def encrypt_letter(letter, shift):
-    cipher = ord(letter) + shift                                  # x + n                                
-    return chr(cipher)
+  cipher = ord(letter) + shift                                  # x + n                                
+  return chr(cipher)
     
 # function to substract a shift to a letter (backwords)
+def decrypt_letter(letter, shift):
+  cipher = ord(letter) - shift
+  return chr(cipher)
 
 # function to encrypt words using a shift
 # function to decrypt words using a shift 
@@ -39,8 +42,8 @@ def encrypt_letter(letter, shift):
 # TEST CASES 
 
 # a is shifted over by 5, results to f
-print(encrypt_letter('a', 5))
-#write_file('enChar', encrypt_letter('a', 5))
+# print(encrypt_letter('a', 5))
+write_file('enChar', encrypt_letter('a', 5))
 
 
 
