@@ -52,9 +52,6 @@ def encrypt_word(word):
 print(encrypt_letter('a', 0))
 write_file('enChar', encrypt_letter('a', 0))
 
-print(encrypt_letter('a', 26))
-write_file('enChar', encrypt_letter('a', 26))
-
 
 
 
